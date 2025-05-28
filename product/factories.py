@@ -1,22 +1,21 @@
 import factory
 
-from product.models import Product
-from product.models import Category
+from product.models import Product, Category
 
 
 class CategoryFactory(factory.django.DjangoModelFactory):
-    title = factory.faker('pystr')
-    slug = factory.faker('pystr')
-    description = factory.faker('pystr')
+    title = factory.Faker('word')
+    slug = factory.Faker('slug')
+    description = factory.Faker('sentence')
     active = factory.Iterator([True, False])
 
     class Meta:
         model = Category
 
 class ProductFactory(factory.django.DjangoModelFactory):
-    price = factory.faker('pystr')
-    category = factory.LazyAttribute(CategoryFactory)
-    title = factory.faker('pystr')
+    price = factory.Faker('pydecimal', left_digits=4, right_digits=2, positive=True)
+    category = factory.SubFactory(CategoryFactory)
+    title = factory.Faker('sentence')
 
     @factory.post_generation
     def category(self, create, extracted, **kwargs):
