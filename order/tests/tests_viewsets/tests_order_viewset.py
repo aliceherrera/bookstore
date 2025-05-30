@@ -33,8 +33,10 @@ class TestOrderViewSet(APITestCase):
         self.assertEqual(order_data['product'][0]['category'][0]['title'], self.category.title)
 
     def test_create_order(self):
-        user = UserFactory()
+        category = CategoryFactory()
         product = ProductFactory()
+        product.category.set([category])
+        user = UserFactory()
         data = json.dumps({
             'products_id': [product.id],
             'user' : user.id
@@ -45,6 +47,9 @@ class TestOrderViewSet(APITestCase):
             data=data,
             content_type='application/json'
         )
+
+        print(response.status_code)
+        print(response.data)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
