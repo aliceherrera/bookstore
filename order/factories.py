@@ -2,11 +2,11 @@ import factory
 
 from django.contrib.auth.models import User
 
-from order.factories import Order
+from order.models import Order
 
 class UserFactory(factory.django.DjangoModelFactory):
-    email = factory.faker('pystr')
-    username = factory.faker('pystr')
+    email = factory.Faker('pystr')
+    username = factory.Faker('pystr')
 
     class Meta:
         model = User
