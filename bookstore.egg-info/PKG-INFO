@@ -6,13 +6,17 @@ Author: Alice Herrera
 Author-email: aliceherrera80@gmail.com
 Requires-Python: >=3.11
 Requires-Dist: Django<6.0.0,>=5.2.1
+Requires-Dist: black<26.0.0,>=25.1.0
 Requires-Dist: django-debug-toolbar<6.0.0,>=5.2.0
 Requires-Dist: django-extensions<5.0,>=4.1
 Requires-Dist: djangorestframework<4.0.0,>=3.16.0
 Requires-Dist: factory-boy<4.0.0,>=3.3.3
 Requires-Dist: faker<38.0.0,>=37.3.0
+Requires-Dist: flake8<8.0.0,>=7.3.0
+Requires-Dist: psycopg2-binary<3.0.0,>=2.9.10
 Requires-Dist: pytest-django<5.0.0,>=4.11.1
 Requires-Dist: pytest<9.0.0,>=8.3.5
+Requires-Dist: whitenoise<7.0.0,>=6.9.0
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist
