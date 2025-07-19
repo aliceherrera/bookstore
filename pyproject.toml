@@ -18,6 +18,7 @@ factory-boy = "^3.3.3"
 psycopg2-binary = "^2.9.10"
 flake8 = "^7.3.0"
 black = "^25.1.0"
+gitpython = "^3.1.44"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
