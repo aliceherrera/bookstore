@@ -20,7 +20,6 @@ flake8 = "^7.3.0"
 black = "^25.1.0"
 gitpython = "^3.1.44"
 whitenoise = "^6.9.0"
-gunicorn = "^23.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
