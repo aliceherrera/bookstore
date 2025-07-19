@@ -142,6 +142,32 @@ pyflakes = ">=3.4.0,<3.5.0"
 
 [[package]]
 category = "main"
+description = "Git Object Database"
+name = "gitdb"
+optional = false
+python-versions = ">=3.7"
+version = "4.0.12"
+
+[package.dependencies]
+smmap = ">=3.0.1,<6"
+
+[[package]]
+category = "main"
+description = "GitPython is a Python library used to interact with Git repositories"
+name = "gitpython"
+optional = false
+python-versions = ">=3.7"
+version = "3.1.44"
+
+[package.dependencies]
+gitdb = ">=4.0.1,<5"
+
+[package.extras]
+doc = ["sphinx (>=7.1.2,<7.2)", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
+test = ["coverage", "ddt (>=1.1.1,<1.4.3 || >1.4.3)", "mock", "mypy", "pre-commit", "pytest (>=7.3.1)", "pytest-cov", "pytest-instafail", "pytest-mock", "pytest-sugar", "typing-extensions"]
+
+[[package]]
+category = "main"
 description = "WSGI HTTP Server for UNIX"
 name = "gunicorn"
 optional = false
@@ -293,6 +319,14 @@ testing = ["django", "django-configurations (>=2.0)"]
 
 [[package]]
 category = "main"
+description = "A pure Python implementation of a sliding window memory map manager"
+name = "smmap"
+optional = false
+python-versions = ">=3.7"
+version = "5.0.2"
+
+[[package]]
+category = "main"
 description = "A non-validating SQL parser."
 name = "sqlparse"
 optional = false
@@ -323,7 +357,7 @@ version = "6.9.0"
 brotli = ["brotli"]
 
 [metadata]
-content-hash = "8319860975280df25a2202fa5278952ea739a861854c07e2dbefb473fe207389"
+content-hash = "639d9975efbbda9f32c1f69e42d99b792402cbed9464e4ad785098b539925ba8"
 python-versions = ">=3.11"
 
 [metadata.files]
@@ -338,6 +372,8 @@ djangorestframework = []
 factory-boy = []
 faker = []
 flake8 = []
+gitdb = []
+gitpython = []
 gunicorn = []
 iniconfig = []
 mccabe = []
@@ -352,6 +388,7 @@ pyflakes = []
 pygments = []
 pytest = []
 pytest-django = []
+smmap = []
 sqlparse = []
 tzdata = []
 whitenoise = []
