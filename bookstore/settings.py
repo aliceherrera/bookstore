@@ -63,7 +63,7 @@ ROOT_URLCONF = "bookstore.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates", "bookstore")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
